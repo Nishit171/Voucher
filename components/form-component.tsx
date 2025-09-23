@@ -117,7 +117,7 @@ export default function FormComponent({ onSuccess }: FormComponentProps) {
             <Image src="/hplogo.png" alt="HP World Logo" width={40} height={40} className="rounded-full" />
             <h1 className="text-2xl font-bold text-gray-800">HP World</h1>
           </div>
-          <p className="text-gray-600 mb-6">Sign up and get a gift voucher of Upto Rs 15000</p>
+          <p className="text-gray-600 mb-6">Sign up and get a gift voucher of Upto Rs 5000</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">

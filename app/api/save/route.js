@@ -10,7 +10,7 @@ export async function POST(request) {
     const body = await request.json()
 
     // Validate required fields
-    const { name, mobile, email, occupation } = body
+    const { name, mobile, email, occupation, interests, ageGroup, pinCode } = body
 
     if (!name || !mobile) {
       return NextResponse.json({ success: false, error: "Missing required fields" }, { status: 400 })
@@ -36,6 +36,9 @@ export async function POST(request) {
       mobile,
       email: email || "",
       occupation: occupation || "",
+      interests: interests || "",
+      ageGroup: ageGroup || "",
+      pinCode: pinCode || "",
       timestamp: new Date().toISOString(),
     }
 
@@ -56,6 +59,9 @@ export async function POST(request) {
       const entryMobile = process.env.GOOGLE_ENTRY_MOBILE
       const entryEmail = process.env.GOOGLE_ENTRY_EMAIL
       const entryOccupation = process.env.GOOGLE_ENTRY_OCCUPATION
+      const entryInterests = process.env.GOOGLE_ENTRY_INTERESTS
+      const entryAgeGroup = process.env.GOOGLE_ENTRY_AGEGROUP
+      const entryPinCode = process.env.GOOGLE_ENTRY_PINCODE
 
       if (formId && entryName && entryMobile && entryEmail && entryOccupation) {
         const formUrl = `https://docs.google.com/forms/d/e/${formId}/formResponse`
@@ -64,6 +70,9 @@ export async function POST(request) {
         params.append(`entry.${entryMobile}`, mobile)
         if (email) params.append(`entry.${entryEmail}`, email)
         if (occupation) params.append(`entry.${entryOccupation}`, occupation)
+        if (interests && entryInterests) params.append(`entry.${entryInterests}`, interests)
+        if (ageGroup && entryAgeGroup) params.append(`entry.${entryAgeGroup}`, ageGroup)
+        if (pinCode && entryPinCode) params.append(`entry.${entryPinCode}`, pinCode)  
 
         const res = await fetch(formUrl, {
           method: "POST",

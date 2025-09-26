@@ -206,7 +206,7 @@ export default function FormComponent({ onSuccess }: FormComponentProps) {
     console.log("[v0] Coupon API payload:", couponApiPayload)
 
     const couponApiResponse = await fetch(
-      "https://test-cms.apeirosai.com/cms/api/v1/issueCoupon",
+      "https://cms.apeirosai.com/cms/api/v1/issueCoupon",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

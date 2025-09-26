@@ -240,8 +240,9 @@ export default function FormComponent({ onSuccess }: FormComponentProps) {
           <div className="flex items-center justify-center gap-3 mb-2">
             <Image src="/hplogo.png" alt="HP World Logo" width={40} height={40} className="rounded-full" />
             <h1 className="text-2xl font-bold text-gray-800">HP World</h1>
+            <p className="text-sm text-gray-500 -mt-1">- GEONET IT Mall</p>
           </div>
-          <p className="text-gray-600 mb-0">Sign up and get a gift voucher of Upto Rs 5000</p>
+          <p className="text-gray-600 mb-0">Sign up and get a Gift Voucher of upto Rs&nbsp;5000</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-3">
@@ -287,8 +288,8 @@ export default function FormComponent({ onSuccess }: FormComponentProps) {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="email" className="text-sm font-medium text-muted-foreground">
-              Email Address <span className="text-xs">(Optional)</span>
+            <Label htmlFor="email" className="text-sm font-medium text-foreground">
+              Email Address <span className="text-xs text-gray-500">(Optional)</span>
             </Label>
             <Input
               id="email"
@@ -334,8 +335,8 @@ export default function FormComponent({ onSuccess }: FormComponentProps) {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="ageGroup" className="text-sm font-medium text-muted-foreground">
-              Age Group <span className="text-xs">(Optional)</span>
+            <Label htmlFor="ageGroup" className="text-sm font-medium text-foreground">
+              Age Group <span className="text-xs text-gray-500">(Optional)</span>
             </Label>
             <Select
               name="ageGroup"
@@ -358,8 +359,8 @@ export default function FormComponent({ onSuccess }: FormComponentProps) {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="occupation" className="text-sm font-medium text-muted-foreground">
-              Occupation <span className="text-xs">(Optional)</span>
+            <Label htmlFor="occupation" className="text-sm font-medium text-foreground">
+              Occupation <span className="text-xs text-gray-500">(Optional)</span>
             </Label>
             <Input
               id="occupation"
@@ -373,8 +374,8 @@ export default function FormComponent({ onSuccess }: FormComponentProps) {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="pinCode" className="text-sm font-medium text-muted-foreground">
-              PIN Code <span className="text-xs">(Optional)</span>
+            <Label htmlFor="pinCode" className="text-sm font-medium text-foreground">
+              PIN Code <span className="text-xs text-gray-500">(Optional)</span>
             </Label>
             <Input
               id="pinCode"

@@ -168,7 +168,7 @@ export default function FormComponent({ onSuccess }: FormComponentProps) {
 
   // Map Interests to Campaign IDs (replace with real IDs later)
   const campaignMap: Record<string, string> = {
-    "Desktop & Laptops": "C100188", // default placeholder
+    "Desktop & Laptops": "C100190", // default placeholder
     "Printers": "C100182",          // replace when you get real ID
     "Accessories": "C100184",       // replace when you get real ID
   }
